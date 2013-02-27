@@ -1,0 +1,8 @@
+=== Running
+
+Use "gradle eclipse" and run with eclipse or
+Use "gradle build" and run with:
+
+  java -cp "$(gradle -q getClasspath)" com.example.Main
+
+
