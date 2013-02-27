@@ -1,0 +1,35 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+//apply plugin: 'maven'
+
+
+repositories {
+
+
+	//mavenRepo name: 'snapshots', url: 'file://' + System.getProperty('user.home')  + '/.m2/repository'
+  	//mavenRepo name: 'nexus', url: 'http://gitrepo:8081/nexus/content/repositories/public'
+    mavenCentral()
+    //mavenRepo name: 'spring-milestones', url: 'http://maven.springframework.org/milestone'    
+    //mavenRepo name: 'spring-release', url: 'http://maven.springframework.org/release'    
+    //mavenRepo name: 'java.net', url: 'http://download.java.net/maven/2/'
+}
+
+project.ext {
+  springVersion='3.1.1.RELEASE'
+}
+
+dependencies {
+					
+					
+	compile		"ch.qos.logback:logback-classic:0.9.24",
+			"org.springframework:spring-context:$springVersion",
+			"javax.inject:javax.inject:1",
+			//"digital-software-architecture-comittee:spring-reference:0.0.1-SNAPSHOT",
+			"org.springframework:spring-beans:$springVersion",
+			"org.springframework:spring-core:$springVersion"
+	
+	testCompile 	"junit:junit:4.5",
+			"org.springframework:spring-test:$springVersion"
+
+}
+
